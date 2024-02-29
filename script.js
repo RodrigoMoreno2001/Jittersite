@@ -3,7 +3,6 @@
 
 const clicker = document.querySelector('.clicker');
 const media = document.querySelector('.media');
-const conteo = document.querySelector('.cont');
 
 let color;
 let ultClick;
@@ -16,12 +15,10 @@ clicker.addEventListener('click', () => {
     let intervalo =actualClick - ultClick;
     ultClick=actualClick;
     cps=1000/intervalo;
-    clicks++;
 });
-
+//arreglar
 setInterval(()=>{
     media.innerHTML = (cps == 0) ? "JitterSite" : "CPS: " + (cps).toFixed(2);
-    clicks = 0;
 }, 200);
 
 setInterval(function () {
